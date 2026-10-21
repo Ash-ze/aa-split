@@ -115,10 +115,10 @@ function render() {
       return go('#/', true);
     }
     app.innerHTML = renderLedger(l, r.tab);
-    document.title = `${l.name} · AA 分账`;
+    document.title = `${l.name} · AA 分账 · AA Split`;
   } else {
     app.innerHTML = renderHome();
-    document.title = 'AA 分账';
+    document.title = 'AA 分账 · AA Split';
   }
   window.scrollTo(0, 0);
 }
@@ -143,7 +143,7 @@ function renderHome() {
 
   return `
     <header class="topbar">
-      <div class="brand"><img src="./icon.svg" alt="" width="28" height="28" /> AA 分账</div>
+      <div class="brand"><img src="./icon.svg" alt="" width="28" height="28" /> AA 分账 · AA Split</div>
       <button class="icon-btn" data-action="theme" aria-label="主题：${THEME_LABEL[state.theme]}" title="主题：${THEME_LABEL[state.theme]}">${themeIcon()}</button>
     </header>
     <main class="page">
